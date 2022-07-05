@@ -25,9 +25,27 @@ main {
   text-align: center;
   margin-bottom: 4rem;
 }
+.btn {
+  background: hsl(205, 78%, 60%);
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+  color: var(--clr-white);
+  letter-spacing: 0.1rem;
+  border-color: transparent;
+  cursor: pointer;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+@media (max-width: 1200) {
+  main {
+    width: 70vw;
+  }
+}
 @media screen and (min-width: 992px) {
   .section {
-    width: 95vw;
+    width: 90vw;
   }
 }
 @media screen and (min-width: 800px) {

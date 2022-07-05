@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Tour.css";
 
-const Tour = ({ id, image, info, price, name }) => {
+const Tour = ({ id, image, info, price, name, removeTour }) => {
+  const [readMore, setreadMore] = useState(false);
+
   return (
     <article className="single-tour">
       <img src={image} alt={name} />
@@ -13,8 +15,15 @@ const Tour = ({ id, image, info, price, name }) => {
             {price}
           </h4>
         </div>
-        <p>{info}</p>
-        <button className="delete-btn">not interested</button>
+        <p>
+          {readMore ? info : `${info.substring(0, info.length / 2)}...`}
+          <button onClick={() => setreadMore(!readMore)}>
+            {readMore ? "Show Less" : "Read More"}
+          </button>
+        </p>
+        <button className="delete-btn" onClick={() => removeTour(id)}>
+          not interested
+        </button>
       </footer>
     </article>
   );

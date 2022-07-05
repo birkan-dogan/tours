@@ -57,3 +57,8 @@ p {
   margin-bottom: 1.25rem;
   color: hsl(210, 22%, 49%);
 }
+@media (max-width: 1200) {
+  .single-tour img {
+    width: 50vw;
+  }
+}
