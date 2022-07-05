@@ -1,9 +1,11 @@
 import React from "react";
+import gif from "./spinner.gif";
+import "./Loading.css";
 
 const Loading = () => {
   return (
     <div className="loading">
-      <h1>loading...</h1>
+      <img src={gif} alt="loading" />
     </div>
   );
 };
